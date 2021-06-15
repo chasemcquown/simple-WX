@@ -8,20 +8,39 @@
     <link rel="stylesheet" href="./assets/style.css">
     <title>Simple WX</title>
 </head>
-<body>
+<body class="flex-column min-100-vh">
     <nav class="navbar navbar-expand-md navbar-dark gradient-custom">
         <a class="navbar-brand abs nav-text" href="#">Simple WX</a>
     </nav>
 
-    <div class="card search-card" style="width: 18rem;">
-        <div class="card-body">
-          <h4 class="card-title">Search for a City:</h4>
-          <input id="city" type="city" class="form-control" placeholder="Huntington Beach">
-          <div class="d-grid gap-2 search-btn">
-            <button class="btn btn-primary" id="search-btn" type="button">Search</button>
-          </div>
+    <main class="flex-row justify-space-between">
+      <div class="col-12 col-md-4">
+        <div class="card search-card" style="width: 18rem;">
+            <div class="card-body">
+              <h4 class="card-title">Search for a City:</h4>
+              <input id="city" type="city" class="form-control" placeholder="Huntington Beach">
+              <div class="d-grid gap-2 search-btn">
+                <button class="btn btn-primary" id="search-btn" type="button">Search</button>
+              </div>
+            </div>
         </div>
+        <div class="card search-card" style="width: 18rem;">
+          <div class="card-body">
+            <h4 class="card-title">Previous searches:</h4>
+            <div class="d-grid gap-2 search-btn">
+
+            </div>
+          </div>
       </div>
+      </div>    
+     
+      <div class="col-12 col-md-8">
+          <h4 class="subtitle">Current WX Data:<span id="repo-search-term"></span></h4>
+          <div id="repos-container" class="list-group"></div>
+      </div>
+
+        
+    </main>    
 
 <script src="./assets/script.js"></script>    
 </body>
