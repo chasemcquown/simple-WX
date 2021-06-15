@@ -1,0 +1,37 @@
+.gradient-custom {
+  /* fallback for old browsers */
+  background: #061793;
+
+  /* Chrome 10-25, Safari 5.1-6 */
+  background: -webkit-linear-gradient(
+    to left,
+    rgba(6, 23, 147, 0.5),
+    rgba(34, 126, 247, 0.5)
+  );
+
+  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  background: linear-gradient(
+    to left,
+    rgba(6, 23, 147, 0.5),
+    rgba(34, 126, 247, 0.5)
+  );
+}
+
+.abs {
+  width: 100%;
+  left: 0;
+  text-align: center;
+}
+
+.nav-text {
+  font-size: 40px;
+  font-weight: bolder;
+}
+
+.search-card {
+  border: none;
+}
+
+.search-btn {
+  padding-top: 7px;
+}
