@@ -4,11 +4,23 @@ var searchBtn = document.querySelector("#search-btn");
 // identify input element
 var usersCity = document.querySelector("#city");
 
+// identify button container
+var buttonContainer = document.querySelector("#button-container");
+
 // this is where the forecast will be generated and displayed to webpage
 var getCity = function() {
 
+
+
+
     // store the city that the user is searching for in a variable
     var city = usersCity.value.trim();
+
+    // append button to container that holds user's searched city
+    var cityButton = document.createElement("button");
+    cityButton.innerHTML = city;
+    cityButton.classList = "btn btn-primary city-button";
+    buttonContainer.appendChild(cityButton);
 
     // api key 
     var apiKey = "&appid=cf6215d35458f7e05133781f893bec16";
