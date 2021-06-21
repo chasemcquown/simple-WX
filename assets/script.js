@@ -16,6 +16,9 @@ var conditionsContainer = document.querySelector("#conditions-container");
 // identify city name container
 var cityNameHeading = document.querySelector("#city-search");
 
+// identify icon container
+var iconContainer = document.querySelector(".weather-icon");
+
 // identify current temp container
 var currentTempText = document.querySelector("#current-temp");
 
@@ -60,6 +63,9 @@ var getCity = function() {
         var currentTemp = data.list[0].main.temp
         var currentWindSpeed = data.list[0].wind.speed
         var currentHumidity = data.list[0].main.humidity
+        var clouds = data.list[0].weather[0].icon
+        console.log(clouds);
+        iconContainer.innerHTML = '<img src="./assets/icons/' + clouds + '.png" >'
         
         cityNameHeading.innerHTML = searchedCity
         currentTempText.innerHTML = "Temp: " + currentTemp + " F"
