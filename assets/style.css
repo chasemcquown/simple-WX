@@ -40,8 +40,14 @@
   padding-top: 7px;
 }
 
-.city-button {
-  margin-top: 12px;
+.found-city {
+  margin-top: 10px;
+}
+
+.conditions {
+  border: solid 5px rgba(6, 23, 147, 0.5);
+  padding-left: 15px;
+  padding-top: 15px;
 }
 
 body {
