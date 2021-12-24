@@ -21,39 +21,32 @@
       <div class="container">
         <div class="row ">
 
-          <!-- SEARCH COLUMN -->
-          <div class="col searches">
-            <div class="card search-card" style="width: 18rem;">
-              <div class="card-body">
-                <h4 class="card-title">Search for a City:</h4>
-                <input id="city" type="city" class="form-control" placeholder="Huntington Beach">
-                <br>
-                <div class="d-grid gap-2 search-button">
-                  <button class="btn btn-primary" id="search-btn" type="button">Search</button>
+            <!-- SEARCH COLUMN -->
+            <div class="col searches">
+              <div class="card search-card" style="width: 18rem;">
+                <div class="card-body">
+                  <h4 class="card-title" style="font-weight: bold;">Search for a City:</h4>
+                  <input id="city" type="city" class="form-control" placeholder="Huntington Beach">
                   <br>
+                  <div class="d-grid gap-2 search-button">
+                    <button class="btn btn-primary" id="search-btn" type="button">Search</button>
+                    <div class="d-grid gap-2" id="previous-searches">
+                      <!-- ADD PREVIOUS SEARCH BUTTONS HERE -->
+                    </div>
+                  </div>
                 </div>
-              </div>
-          </div>
+            </div>
           </div>
 
-          <!-- CURRENT CONDITIONS COLUMN -->
-          <div class="col-8 current-weather">
-            <h4 id="recent-search">Weather made simple!</h4>
-            <br>
-            <p id="current-temp"></p>
-            <p id="current-humidity"></p>
-            <p id="current-wind"></p>
-          </div>
-
-          <!-- PREVIOUS SEARCH BUTTONS -->
-          <div class="col searches">
-            <div class="card search-card" style="width: 18rem;">
-              <div class="card-body">
-                <div class="d-grid gap-2" id="previous-searches">
-                  <!-- ADD PREVIOUS SEARCH BUTTONS HERE -->
-                </div>
-              </div>
-          </div>
+            <!-- CURRENT CONDITIONS COLUMN -->
+            <div class="col-8" id="current-weather">
+              <h4 id="recent-search" style="font-weight: bold;">Weather made simple!</h4>
+              <img src="" alt="" id="current-conditions-icon">
+              <p id="conditions-description" style="font-size: medium; font-weight: bold;"></p>
+              <p id="current-temp" style="font-size: medium; font-weight: bold;"></p>
+              <p id="current-humidity" style="font-size: medium; font-weight: bold;"></p>
+              <p id="current-wind" style="font-size: medium; font-weight: bold;"></p>
+            </div>
           </div>
         </div>
       </div>
@@ -61,46 +54,51 @@
       <!-- FIVE DAY FORECAST -->
       <div class="container">
         <div class="row five-day">
-          <h4 style="text-align: center;">5 Day Forecast:</h4>
+          <h4 style="text-align: center;" id="card-title"></h4>
           <br>
           <div class="card col-2 forecast-card">
             <div class="card-body">
-              <h5 class="card-title" id='day-one-date'></h5>
-              <p class="card-text" id="day-one-temp"></p>
-              <p class="card-text" id="day-one-wind"></p>
-              <p class="card-text" id="day-one-humidity"></p>
+              <h5 class="card-title" id='day-one-date' style="font-weight: bold;"></h5>
+              <img src="assets/icons/04d.png" alt="" id="day-one-icon">
+              <p class="card-text" id="day-one-temp" style="font-size: medium; font-weight: bold;"></p>
+              <p class="card-text" id="day-one-wind" style="font-size: medium; font-weight: bold;"></p>
+              <p class="card-text" id="day-one-humidity" style="font-size: medium; font-weight: bold;"></p>
             </div>
           </div>
           <div class="card col-2 forecast-card">
             <div class="card-body">
-              <h5 class="card-title" id='day-two-date'></h5>
-              <p class="card-text" id="day-two-temp"></p>
-              <p class="card-text" id="day-two-wind"></p>
-              <p class="card-text" id="day-two-humidity"></p>
+              <h5 class="card-title" id='day-two-date' style="font-weight: bold;"></h5>
+              <img src="assets/icons/09n.png" alt="" id="day-two-icon">
+              <p class="card-text" id="day-two-temp" style="font-size: medium; font-weight: bold;"></p>
+              <p class="card-text" id="day-two-wind" style="font-size: medium; font-weight: bold;"></p>
+              <p class="card-text" id="day-two-humidity" style="font-size: medium; font-weight: bold;"></p>
             </div>
           </div>
           <div class="card col-2 forecast-card">
             <div class="card-body">
-              <h5 class="card-title" id='day-three-date'></h5>
-              <p class="card-text" id="day-three-temp"></p>
-              <p class="card-text" id="day-three-wind"></p>
-              <p class="card-text" id="day-three-humidity"></p>
+              <h5 class="card-title" id='day-three-date' style="font-weight: bold;"></h5>
+              <img src="assets/icons/10n.png" alt="" id="day-three-icon">
+              <p class="card-text" id="day-three-temp" style="font-size: medium; font-weight: bold;"></p>
+              <p class="card-text" id="day-three-wind" style="font-size: medium; font-weight: bold;"></p>
+              <p class="card-text" id="day-three-humidity" style="font-size: medium; font-weight: bold;"></p>
             </div>
           </div>
           <div class="card col-2 forecast-card">
             <div class="card-body">
-              <h5 class="card-title" id='day-four-date'></h5>
-              <p class="card-text" id="day-four-temp"></p>
-              <p class="card-text" id="day-four-wind"></p>
-              <p class="card-text" id="day-four-humidity"></p>
+              <h5 class="card-title" id='day-four-date' style="font-weight: bold;"></h5>
+              <img src="assets/icons/11n.png" alt="" id="day-four-icon">
+              <p class="card-text" id="day-four-temp" style="font-size: medium; font-weight: bold;"></p>
+              <p class="card-text" id="day-four-wind" style="font-size: medium; font-weight: bold;"></p>
+              <p class="card-text" id="day-four-humidity" style="font-size: medium; font-weight: bold;"></p>
             </div>
           </div>
           <div class="card col-2 forecast-card">
             <div class="card-body">
-              <h5 class="card-title" id='day-five-date'></h5>
-              <p class="card-text" id="day-five-temp"></p>
-              <p class="card-text" id="day-five-wind"></p>
-              <p class="card-text" id="day-five-humidity"></p>
+              <h5 class="card-title" id='day-five-date' style="font-weight: bold;"></h5>
+              <img src="assets/icons/13n.png" alt="" id="day-five-icon">
+              <p class="card-text" id="day-five-temp" style="font-size: medium; font-weight: bold;"></p>
+              <p class="card-text" id="day-five-wind" style="font-size: medium; font-weight: bold;"></p>
+              <p class="card-text" id="day-five-humidity" style="font-size: medium; font-weight: bold;"></p>
             </div>
           </div>
         </div>
