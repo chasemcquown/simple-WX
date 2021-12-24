@@ -2,6 +2,40 @@
   box-sizing: border-box;
 }
 
+.search-button {
+  border-bottom: 3px solid black;
+}
+
+.five-day {
+  justify-content: space-between;
+}
+
+.current-weather {
+  border: 5px black;
+}
+
+.forecast-card {
+  color: white;
+  border-style: none;
+
+  /* fallback for old browsers */
+  background: #061793;
+
+  /* Chrome 10-25, Safari 5.1-6 */
+  background: -webkit-linear-gradient(
+    to left,
+    rgba(6, 23, 147, 0.5),
+    rgba(34, 126, 247, 0.5)
+  );
+
+  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  background: linear-gradient(
+    to left,
+    rgba(6, 23, 147, 0.5),
+    rgba(34, 126, 247, 0.5)
+  );
+}
+
 .gradient-custom {
   /* fallback for old browsers */
   background: #061793;
@@ -46,8 +80,8 @@
 
 .conditions {
   border: solid 5px rgba(6, 23, 147, 0.5);
-  padding-left: 15px;
-  padding-top: 15px;
+  text-align: center;
+  padding-top: 10px;
 }
 
 body {
@@ -74,6 +108,10 @@ p {
 
 .card-body {
   padding: 2.5%;
+}
+
+.five-day-cards {
+  background-color: #696969;
 }
 
 /* FORM */
