@@ -48,6 +48,10 @@
   );
 }
 
+.social-icon:hover {
+  background-color: white;
+}
+
 .abs {
   width: 100%;
   left: 0;

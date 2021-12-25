@@ -9,6 +9,27 @@ let previousSearches = [];
 // api key 
 const apiKey = "&appid=cf6215d35458f7e05133781f893bec16";
 
+// if recent searches exist in local storage, grab them 
+function getRecentSearches() {
+
+    let citySearches = JSON.parse(localStorage.getItem('cities'))
+
+    for(i = 0; i < citySearches.length; i++) {
+        
+        console.log(citySearches[i])
+        
+        // create and display button for recent searches
+        const buttonContainer = document.querySelector("#previous-searches")
+        let newButton = document.createElement("button")
+        newButton.id = citySearches[i]
+        newButton.innerText = citySearches[i]
+        newButton.classList = 'btn btn-secondary'
+        buttonContainer.appendChild(newButton)
+    }
+
+    
+}
+
 // fetch for inputted city
 function getCityWX() {
 
@@ -35,7 +56,7 @@ function getCityWX() {
         let currentWxContainer = document.querySelector("#current-weather")
         currentWxContainer.style.color = "white"
         currentWxContainer.style.borderRadius = "5px"
-        currentWxContainer.style.backgroundColor = '#6c757d'
+        currentWxContainer.style.backgroundColor = 'rgba(6, 23, 147, 0.5)'
 
         // get current WX data
         let weatherIcon = data.list[0].weather[0].icon
@@ -264,8 +285,11 @@ function handleSearch(e) {
 }
 
 
-// find city once button has been clicked
+// find city once search button has been clicked
 searchButton.addEventListener('click', getCityWX)
 
-// listen for clicks on parent element of recent search buttons
+// listen for clicks on parent element of recent search buttons, then fetch
 recentSearchBtns.addEventListener("click", handleSearch)
+
+// get items from locl storage
+getRecentSearches()
