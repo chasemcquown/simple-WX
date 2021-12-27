@@ -9,16 +9,14 @@ let previousSearches = [];
 // api key 
 const apiKey = "&appid=cf6215d35458f7e05133781f893bec16";
 
-// if recent searches exist in local storage, grab them 
+// if recent searches exist in local storage, grab them and make a button for each saved city
 function getRecentSearches() {
 
     let citySearches = JSON.parse(localStorage.getItem('cities'))
 
     for(i = 0; i < citySearches.length; i++) {
         
-        console.log(citySearches[i])
-        
-        // create and display button for recent searches
+        // create and display button for searche saved to local storage
         const buttonContainer = document.querySelector("#previous-searches")
         let newButton = document.createElement("button")
         newButton.id = citySearches[i]

@@ -443,3 +443,22 @@ p {
     flex: 0 0 100%;
   }
 }
+
+@media screen and (max-width: 414px) {
+  .five-day {
+    flex-direction: column;
+  }
+  .forecast-card {
+    width: 250px;
+    margin-left: 65px;
+  }
+  #current-weather {
+    margin-left: 65px;
+  }
+  .searches {
+    margin-left: 35px;
+  }
+  #recent-search {
+    display: none;
+  }
+}
